@@ -9,10 +9,10 @@ updatedDate: "Dec 13 2022"
 ---
 ## Steven Carpenter
 ### Full-Stack Software Developer
-#### **Email:**  steven.carpenter@skdevstudis.dev
+#### **Email:**  steven.carpenter@skdevstudios.com
 #### **Phone Number:** +**1** (**810**)-**287**-**9252**
-#### **Github**: https://github.com/specCon18
-#### **Portfolio**: https://scarpenter.skdevstudios.dev
+#### **Git**: https://git.skdevstudios.cloud/specCon18/
+#### **Portfolio**: https://blog.skdevstudios.cloud
 #### **Grand Blanc**, **Michigan**
 
 # Objective Summary
