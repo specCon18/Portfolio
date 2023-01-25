@@ -3,12 +3,12 @@ type: docker
 name: default
 
 steps:
-- name: build
+- name: astro-build
   image: node:16.19.0-bullseye
   commands:
   - npm install
   - npm run build
-- name: deploy
+- name: container-build
   image: httpd:latest
   commands:
     - cp -r dist/ /usr/local/apache2/htdocs/
