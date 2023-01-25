@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: node:16.19.0-bullseye
+  commands:
+  - npm install
+  - npm build
+- name: deploy
+  image: httpd:latest
+  commands:
+    - cp -r dist/ /usr/local/apache2/htdocs/
+  volumes:
+    - ./dist:/usr/local/apache2/htdocs
