@@ -8,17 +8,7 @@ steps:
   commands:
   - npm install
   - npm run build
-  volumes:
-  - name: cache
-    path: /dist
 - name: deploy
   image: httpd:latest
   commands:
     - cp -r dist/ /usr/local/apache2/htdocs/
-  volumes:
-  - name: cache
-    path: /dist
-
-volumes:
-  - name: cache
-    temp: {}
