@@ -9,14 +9,14 @@ steps:
   - npm install
   - npm build
   volumes:
-    name: cache
+  - name: cache
     path: /dist
 - name: deploy
   image: httpd:latest
   commands:
     - cp -r dist/ /usr/local/apache2/htdocs/
   volumes:
-    name: cache
+  - name: cache
     path: /dist
 
 volumes:
