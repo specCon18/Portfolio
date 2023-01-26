@@ -17,6 +17,5 @@ steps:
     registry: git.skdevstudios.cloud
     username: specCon18
     password: $PASSWD
-    repo: speccon18/portfolio
-    tags: latest
+    repo: specCon18/portfolio
     dockerfile: Dockerfile
