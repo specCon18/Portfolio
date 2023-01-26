@@ -9,6 +9,16 @@ steps:
   - npm install
   - npm run build
 - name: container-build
-  image: httpd:latest
+  image: plugins/docker
+  environment:
+    PASSWD:
+      from_secret: DOCKER_REG_KEY
+  settings:
+    registry: git.skdevstudios.cloud
+    username: specCon18
+    password: $PASSWD
+    repo: speccon18/portfolio
+    tags: latest
+    dockerfile: Dockerfile
   commands:
     - cp -r dist/ /usr/local/apache2/htdocs/
