@@ -20,5 +20,3 @@ steps:
     repo: speccon18/portfolio
     tags: latest
     dockerfile: Dockerfile
-  commands:
-    - cp -r dist/ /usr/local/apache2/htdocs/
