@@ -10,12 +10,10 @@ steps:
   - npm run build
 - name: container-build
   image: plugins/docker
-  environment:
-    PASSWD:
-      from_secret: DOCKER_REG_KEY
   settings:
     registry: git.skdevstudios.cloud
     username: specCon18
-    password: $PASSWD
+    password:
+      from_secret: DOCKER_REG_KEY
     repo: specCon18/portfolio
     dockerfile: Dockerfile
