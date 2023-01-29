@@ -17,3 +17,4 @@ steps:
       from_secret: DOCKER_REG_KEY
     repo: specCon18/portfolio
     dockerfile: Dockerfile
+    debug: true
