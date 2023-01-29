@@ -1,7 +1,7 @@
 # Portfolio
 [![Build Status](https://ci.skdevstudios.cloud/api/badges/specCon18/Portfolio/status.svg?ref=refs/heads/main)](https://ci.skdevstudios.cloud/specCon18/Portfolio)
 > 🧑‍🚀 Built Using [astro](https://astro.build)
-
+.
 Features:
 - ✅ Sitemap support
 - ✅ RSS Feed support
