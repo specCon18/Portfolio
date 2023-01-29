@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/BlogPost.astro"
+layout: "../layouts/Resume.astro"
 title: "My Resume"
 description: "A Webview of my resume"
 updatedDate: "Dec 13 2022"
