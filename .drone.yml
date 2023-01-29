@@ -15,6 +15,6 @@ steps:
     username: specCon18
     password:
       from_secret: DOCKER_REG_KEY
-    repo: specCon18/portfolio
+    repo: speccon18/portfolio
     dockerfile: Dockerfile
     debug: true
