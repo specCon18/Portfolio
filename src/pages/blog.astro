@@ -2,31 +2,41 @@
 import Main from "../layouts/Main.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 );
 ---
 
 <Main>
-	<main class="pt-20 text-center min-h-screen">
-		<section class="prose text-gray-50 mx-auto">
-			<h1>Articles</h1>
-			<ul class="list-none">
-				{
-					posts.map((post) => (
-						<li>
-							<time datetime={post.frontmatter.pubDate}>
-								{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-									year: 'numeric',
-									month: 'short',
-									day: 'numeric',
-								})}
-							</time>
-							<a class="text-gray-50 hover:text-blue-500 visited:text-purple-300" href={post.url}>{post.frontmatter.title}</a>
-						</li>
-					))
-				}
-			</ul>
-		</section>
-	</main>
+  <main class="min-h-screen pt-20 text-center">
+    <section class="prose mx-auto text-gray-50">
+      <h1>Articles</h1>
+      <ul class="list-none">
+        {
+          posts.map((post) => (
+            <li>
+              <time datetime={post.frontmatter.pubDate}>
+                {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                  "en-us",
+                  {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  }
+                )}
+              </time>
+              <a
+                class="text-gray-50 visited:text-purple-300 hover:text-blue-500"
+                href={post.url}
+              >
+                {post.frontmatter.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </Main>

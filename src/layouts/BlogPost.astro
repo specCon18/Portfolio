@@ -1,35 +1,36 @@
 ---
-import Main from './Main.astro';
+import Main from "./Main.astro";
 
 export interface Props {
-	content: {
-		title: string;
-		description: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
-	};
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage },
 } = Astro.props;
 ---
+
 <Main>
-	<main>
-		<article class="sm:px-2 prose text-center text-gray-50 mx-auto pt-20">
-			{heroImage && <img src={heroImage} alt="" />}
-			<h1 class="title">{title}</h1>
-			{pubDate && <time>{pubDate}</time>}
-			{
-				updatedDate && (
-					<div>
-						Last updated on <time>{updatedDate}</time>
-					</div>
-				)
-			}
-			<hr />
-			<slot />
-		</article>
-	</main>
+  <main>
+    <article class="prose mx-auto pt-20 text-center text-gray-50 sm:px-2">
+      {heroImage && <img src={heroImage} alt="" />}
+      <h1 class="title">{title}</h1>
+      {pubDate && <time>{pubDate}</time>}
+      {
+        updatedDate && (
+          <div>
+            Last updated on <time>{updatedDate}</time>
+          </div>
+        )
+      }
+      <hr />
+      <slot />
+    </article>
+  </main>
 </Main>

@@ -3,6 +3,12 @@ type: docker
 name: default
 
 steps:
+  - name: Run Prettier
+    command: |
+      npx prettier --check "**/*.*" && exit 1
+  - name: Run ESLint
+    command: |
+      npm lint . && exit 1
   - name: astro-build
     image: node:16.19.0-bullseye
     commands:
