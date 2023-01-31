@@ -5,6 +5,7 @@ description: "The reason that im all in on astro for a front end framework."
 pubDate: "Jan 28 2023"
 heroImage: "/create-windmill.jpg"
 ---
+
 Shafts, belts, cogs, big and small! Come one, come all to the most revolutionary tech mod in Minecraft's history! Trains lead the way in the most fantastical manner, driving innovation at a breakneck pace. Chugging through the lowlands of the swamps and the highest peaks of the Badlands, for all the villagers to see. You are the architect of innovation, the one with the plan to usher the world into an industrial future!
 
 Create is a mod that is unparalleled. When you think of a tech mod, you probably envision a room filled with blocks connected by a labyrinth of cables and conduits, obediently executing your every command. But is that truly the case? Consider this: the machines these mods provide are limited to pre-defined tasks, built upon a framework of precisely calibrated components designed to seamlessly integrate with one another. In contrast, Create is the ultimate toolbox of components, each seemingly insignificant on its own, but with a bit of creativity and ingenuity, capable of creating something truly extraordinary.

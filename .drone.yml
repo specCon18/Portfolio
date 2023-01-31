@@ -3,18 +3,18 @@ type: docker
 name: default
 
 steps:
-- name: astro-build
-  image: node:16.19.0-bullseye
-  commands:
-  - npm install
-  - npm run build
-- name: container-build
-  image: plugins/docker
-  settings:
-    registry: git.skdevstudios.cloud
-    username: specCon18
-    password:
-      from_secret: DOCKER_REG_KEY
-    repo: git.skdevstudios.cloud/speccon18/portfolio
-    dockerfile: Dockerfile
-    debug: true
+  - name: astro-build
+    image: node:16.19.0-bullseye
+    commands:
+      - npm install
+      - npm run build
+  - name: container-build
+    image: plugins/docker
+    settings:
+      registry: git.skdevstudios.cloud
+      username: specCon18
+      password:
+        from_secret: DOCKER_REG_KEY
+      repo: git.skdevstudios.cloud/speccon18/portfolio
+      dockerfile: Dockerfile
+      debug: true

@@ -5,6 +5,7 @@ description: "The reason that im all in on astro for a front end framework."
 pubDate: "Dec 13 2022"
 heroImage: "/astro-hero.jpg"
 ---
+
 I recently returned to the workforce after dealing with some medical complications. During my time away, many new technologies arose to disrupt the web development scene. Every day in the reactive web application space, a new framework is released, which means that I had to choose which one I was willing to commit myself to for the next little while.
 
 After plenty of searching, I settled on Svelte. It was fast, I liked the way that its components were written, and most of all, the fact that it didn't use a virtual DOM really appealed to me. This was unique to all the other options at the time I was looking. I was even planning to use Svelte to write this blog post.
