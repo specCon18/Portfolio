@@ -1,43 +1,154 @@
 ---
-import Discord from "../components/Discord.svelte";
+import Footer from "../components/Footer.astro";
 import Main from "../layouts/Main.astro";
 ---
 
+
 <Main>
-  <main class="mb-5 px-5 py-28 text-center">
-    <h1 class="py-1 text-4xl text-gray-50">Hi my name is Steven.</h1>
-    <h2 class="text-2xl">Im a Engineer by trade and a Maker by passion.</h2>
-    <div class="mx-auto w-1/2">
-      <h3 class="py-5 text-xl">Welcome to my little corner of the internet.</h3>
-      <hr class="solid" />
-      <p class="py-2">
+  <main class="text-center">
+    <section class="bg-slate-600 pt-10 mt-12 relative">
+      <img class="w-40 h-40 mx-auto mt-5 rounded-full shadow-xl"src="me.jpg" alt="Steven's Face"/>
+      <h1 class=" text-4xl text-gray-50">Hi my name is Steven.</h1>
+      <h2 class="text-2xl">Im a Engineer by trade and a Maker by passion.</h2>
+      <h3 class="pt-5 pb-40 font-bold text-xl"><span class="transform scale-x-[-1]">🎉</span>Welcome to my little corner of the internet.🎉</h3>        
+      <div class="custom-shape-divider-bottom-1681169144 bg-slate-600">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-slate-700"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-slate-700"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-slate-700"></path>
+        </svg>
+      </div>
+    </section>
+    <section class="bg-slate-700 py-20 relative">
+      <h1 class="text-4xl pb-2">Who am I?</h1>
+      <p class="mx-48 pb-20">
+        I am a 23 year old software engineer,
+        I have a passion for technology that is driven by its capability to solve
+        humanities issues and reduce the struggles of our society as a whole.
         As I return to work this is where I have decided to track my journey. I
         don't like social media so that method of sharing was dead in the water,
         and this presented a particular freedom i've been looking for when it
         comes to expressing myself online.
-      </p>
-      <p class="py-2">
         I've been doing web development since I was around 10 years of age, at
         that time just tinkering with html,css and a bit of php. There's always
         been a beautiful sense of artistry to me when it comes to designing the
-        user expreience that helps deliver a message or product.
+        user expreience that helps deliver a message or product. 
+        I primarly spend time pondering problems looking to create solutions,
+        when i'm not doing that i'm working in my home lab to better understand new and cutting edge tools to keep
+        myself knowledgeable in the field or flying planes in Digital Combat Simulator.
       </p>
-      <p class="py-2">
+      <div class="custom-shape-divider-bottom-1681171783">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-slate-600"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-slate-600"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-slate-600"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="bg-slate-600 py-24 relative">
+      <h1 class="text-4xl pb-2">My Drive?</h1>
+      <p class="mx-48">
+        I grew up in and around Flint, Michigan most of my life.
+        Seeing the poverty and struggle that was present drove me
+        to want to help those in need out of the cycle. 
+        As I grew older my physical condition got worse. 
+        At this time I saw a need for STEM education in the area
+        as the sector is growing and the education could help bring back some social wealth to the city.
+        I currently live in Grand Blanc, Michigan and I'm working to be able to provide that education through
+        an open and free online resource.
+      </p>
+    </section>
+    <section class="bg-slate-700 py-20 relative">
+      <div class="custom-shape-divider-top-1681169344 bg-slate-700">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-slate-600"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-slate-600"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-slate-600"></path>
+        </svg>
+      </div>
+      <h1 class="text-4xl pt-24">Why Here?</h1>
+      <p class="pb-36 mx-48">
         That's why after a bit of thought and consideration I settled on hosting
-        my own blog.
-      </p>
-      <p class="py-2">
-        I not only intend to track my journey back into the Information
+        my own blog. I not only intend to track my journey back into the Information
         Technology field but also post about what I am currently working on and
         occasionally journal on new technology I find interesting.
-      </p>
-      <p class="pt-2 pb-5">
         I can't wait to look back one day on this page and have all the memories
         to enjoy. I hope you are excited to see this page evolve with me and
         join me in my journey.
       </p>
-      <hr class="solid" />
-      <Discord />
-    </div>
+      <div class="custom-shape-divider-bottom-1681169144 bg-slate-700">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-slate-900"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-slate-900"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-slate-900"></path>
+        </svg>
+      </div>
+    </section>
   </main>
+  <Footer />
+  <style>
+.custom-shape-divider-bottom-1681169144 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1681169144 svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 160px;
+}
+
+.custom-shape-divider-bottom-1681169144 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1681169344 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1681169344 svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 160px;
+}
+
+.custom-shape-divider-top-1681169344 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1681171783 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1681171783 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 103px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1681171783 .shape-fill {
+    fill: #FFFFFF;
+}
+  </style>
 </Main>

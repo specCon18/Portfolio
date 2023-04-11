@@ -18,8 +18,8 @@ const {
 
 <Main>
   <main>
-    <article class="prose mx-auto pt-20 text-center text-gray-50 sm:px-2">
-      {heroImage && <img src={heroImage} alt="" />}
+    <article class="prose bg-slate-700 px-5 min-w-full py-16 text-center text-gray-50">
+      {heroImage && <img class="mx-auto" src={heroImage} alt="" />}
       <h1 class="title">{title}</h1>
       {pubDate && <time>{pubDate}</time>}
       {
