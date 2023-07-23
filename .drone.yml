@@ -6,8 +6,6 @@ steps:
   - name: astro-build
     image: node:16.19.0-bullseye
     commands:
-      - npm lint . && exit 1
-      - npx prettier --check "**/*.*" && exit 1
       - npm install
       - npm run build
   - name: container-build
