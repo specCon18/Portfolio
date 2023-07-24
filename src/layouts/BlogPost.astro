@@ -39,7 +39,7 @@ const {
     <article class="prose bg-slate-700 px-5 min-w-full py-16 text-gray-50">
       <div class="text-center">
         {heroImage && <img class="mx-auto" src={heroImage} alt="" />}
-        <h1>{title}</h1>
+        <h1 class="text-gray-50">{title}</h1>
         {pubDate && <time>{pubDate}</time>}    
       </div>
       
@@ -51,7 +51,9 @@ const {
         )
       }
       <hr />
-      <slot />
+      <div class="text-xl">
+        <slot />
+      </div>
     </article>
   </main>
 </Main>
