@@ -2,198 +2,106 @@
 layout: "../layouts/Resume.astro"
 title: "My Resume"
 description: "A Webview of my resume"
-updatedDate: "Dec 13 2022"
+updatedDate: "July 23 2023"
 ---
+# Steven Carpenter
+**Fullstack Software Developer**
 
-# Contact Information
-
----
-
-## Steven Carpenter
-
-### Full-Stack Software Developer
-
-#### **Email:** steven.carpenter@skdevstudios.com
-
-#### **Phone Number:** +**1** (**810**)-**287**-**9252**
-
-#### **Git**: https://git.skdevstudios.cloud/specCon18/
-
-#### **Portfolio**: https://blog.skdevstudios.cloud
-
-#### **Grand Blanc**, **Michigan**
-
-# Objective Summary
+- [Location: Grand Blanc, Michigan, United States]
+- [Phone: (810)-287-9252]
+- [Email: steven.carpenter@skdevstudios.com]
+- [Github: github.com/specCon18]
+- [Portfolio: blog.skdevstudios.cloud]
 
 ---
-
-I am self taught web developer, with a passion for innovating technology by designing and deploying tools that ease the development process allowing for a reliable, reproducable, experience for every user. Im currently returning to the workforce and possess current knowledge in Ansible, Svelte, Typescript, HTML, CSS, Bash scripting and Linux and a desire to design tooling that helps companies deliver their product reliably through strong interface design, modular application architechting, and reliable automation.
-
-# Work Experience
-
-## Divine Appointment Catering
+## Summary
+Passionate and driven Fullstack Developer with over 5 years of experience in developing, deploying and managing software applications and computer networks. Proficient in a range of modern technologies including JavaScript, Python, Rust, Bash, Linux, database technologies, libvirt, kvm, qemu, ansible, and oci image deployment and management.
 
 ---
-
-### Web Developer
-
-##### 2012-2015
-
-- Designed and developed website for their catering business and their food truck that was being launched at the time.
-- Maintained the website I designed for them until it was taken down due to slow business.
-
-### IT Manager
-
-##### 2015 - 2017
-
-- Service, Manage, and Maintained all IT Resources
-
-## Bitwise
+## Skills
+- **Programming Languages:** JavaScript, Python, Rust, CSS, Bash, Nix
+- **Frameworks/Libraries:** Tauri, Astro, GraphQL, Svelte, Sops, TailwindCSS, PostCSS, Vite, SASS
+- **Databases:** MongoDB, PostgreSQL, MariaDB, SurrealDB
+- **Version Control:** Git, GitHub, Gitea
+- **Testing:** Jest, ViTest, language specfic built in testing functionality.
+- **Cloud:** Linode, Terraform, Ansible, Proxmox, Traefik, Terraform
+- **CI/CD:** Drone CI, GitHub Actions
+- **Other:** Docker, Podman/Buildah, Microservices, MVC, Portainer, KVM/libvirt/QEMU stack
 
 ---
+## Experience
 
-## Hardware Technician
+### Fullstack Developer | Bitwise INC., Davison, Michigan
+*2017 – 2018*
+- Website Development
+- Database Management and Deployment
+- Server Deployment
+- Server Maitenance
+- Internal Tooling and Automation Development/Deployment/Management
 
-##### 2015
+### Hardware Technician | EOS, Flint, Michigan
+*2017 - 2017*
+- Built servers for deployment of business security systems
+- Managed inventory and ordering of required components for systems.
+- Pulled and packaged job requisitions for field technicians.
 
-- Serviced and repaired hardware and network solutions for both residential and corperate clients.
+### Web Developer/Network Service Technician | Bitwise INC., Davison, Michigan
+*June 2015 – November 2015*
+- Website Development
+- Database Management and Deployment
+- Internal Tooling and Automation Development/Deployment/Management
+- Assisted in deployment, diagnostic, and management of point to multipoint wireless networks providing internet to customers in rural areas.
 
-## Web Developer
-
-##### 2016-2017
-
-- Maintained and Developed new features for several corperate clients.
-
-# Freelance IT Services
-
-## Flint Massonic Temple
-
-##### 2014-2019
-
----
-
-### Services:
-
-- Serviced computers and printers when down
-
-## Nexus Fire Gaming
-
-##### 2014-2020
-
----
-
-### Services:
-
-- Game Server Development
-- Harware Repair
-- Security Audit
-- Web Development
-- Educational Services
-
-## Dr. Madonna Carpenter-Jackson
-
-##### 2012-Present
+### Hardware/Network Service Technician | Bitwise INC., Davison, Michigan
+*June 2015 – November 2015*
+- Serviced customers personal computers and mobile devices.
+- Serviced and maintained corperations networks, servers, and client access points.
+- Procured replacement/repair parts for customers devices and networks.
+- Assisted in deployment, diagnostic, and management of point to multipoint wireless networks providing internet to customers in rural areas.
 
 ---
+## Education
 
-### Services:
+### Associates in Computer Information Systems
+*Mott Community College, Flint, Michigan, United States | September 2017 - Returning in Fall 2023*
 
-- Security Audit
-- Web Development
-- Hardware Repair
-- Network Management
-- Device Management
+### High School Diploma
+*Bentley High School, Burton, Michigan, United States | September 2013 - May 2017*
 
-## Brittney Stroud
+### Certificate of Completion | Advanced Computer Hardware Technician
+*Genesee Career Institute, Flint, Michigan, United States | September 2015 - June 2017*
 
-##### 2018-Present
-
----
-
-### Services:
-
-- Hardware Repair
-- Security Audit
-- Web Development
-- Network Management
-- Device Management
-- Deployed Smart Home Environment
-
-# Personal projects
-
-- SK Public Access Link Router
-- SK Click - Frontend to PALR
-- YUNODOC Community Edition
-
-# Skills
+### Certificate of Completion | Computer Hardware Technician
+*Genesee Career Institute, Flint, Michigan, United States | September 2015 - June 2016*
 
 ---
+## Projects
 
-### Languages
+### Homelab
+- Built a homelab to practice development and management of declarativly defined virtualized platforms and cloud technologies.
+- Tech stack used: Various Technologies
 
-- English
-- Typescript
-- HTML
-- CSS
-- Bash
-
-### Frameworks
-
-- Tailwind CSS
-- Svelte Framework
-
-### Tooling
-
-- GIMP
-- GIT
-- Docker
-- Linux
-- Ansible
-- Node JS
-
-### Networking
-
-- DNS
-- Cloud Hosting
-
-# Education
+### TAGS Demo
+- A small demonstration of a tech stack I have been building tooling around to make development eaiser for developers.
+- Tech stack used: TAGS
+    - Tauri
+    - Astro
+    - GraphQL/gRPC
+    - SurrealDB
+- [Link to Project](https://git.skdevstudios.cloud/SK-Development-Studios/tags-template)
 
 ---
-
-### Bentley Senior High School
-
-##### 2013-2017
-
-- Completed with a High School Diploma
-
-### GCI Certified Hardware Technician Program
-
-##### 2015-2016
-
-- Completed With Comptia A+ Credential
-
-### GCI Certified Network Technician Program
-
-##### 2016-2017
-
-- Completed With Comptia Network+ Credential
-
-# Activites
+## Certifications
+- Network +, Comptia, Expired August 2020 - Intending to recertify by end of 2023
+- A+, Comptia, Expired August 2020 - Intending to recertify by end of 2023
 
 ---
+## References
+Available upon request
 
-### Hosted Game Servers for Nexus Fire Gaming
+---
+## Languages
+- **English:** Fluent
+- **Spanish:** Basic
 
-##### 2013-2020
-
-### Learning CAD and CAM to assist in additive manufacturing
-
-##### 2020-present
-
-### Learning Machine Learning to work on AI Visual Recognition
-
-##### 2020-present
-
-### Learning Rust to write system level apps that target WASM
-
-##### Jaunary 2022-Present
+---
