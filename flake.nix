@@ -1,78 +1,68 @@
-    # Steven Carpenter's Blog
-    # Copyright (C) 2023  Steven Carpenter
-
-    # This program is free software: you can redistribute it and/or modify
-    # it under the terms of the GNU Affero General Public License as published by
-    # the Free Software Foundation, either version 3 of the License, or
-    # (at your option) any later version.
-
-    # This program is distributed in the hope that it will be useful,
-    # but WITHOUT ANY WARRANTY; without even the implied warranty of
-    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    # GNU Affero General Public License for more details.
-
-    # You should have received a copy of the GNU Affero General Public License
-    # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-    # If you have any questions about this license you may contact me @ steven.carpenter@skdevstudios.com
-
 {
-  description = "nodejs app";
+  description = "A TCG card trading tool written in Rust";
 
-  inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "nixpkgs";
+  inputs={
+    nixpkgs.url = "nixpkgs/23.05";
+    nixago = {
+      url = "github:jmgilman/nixago";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixago-exts = {
+      url = "github:nix-community/nixago-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
+  
+  outputs = { self, nixpkgs, nixago, nixago-exts }: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system: 
-      let
-        pkgs = import nixpkgs {
-          inherit system;
+    build-tailwind = pkgs.writeShellScriptBin "build-tailwind" ''
+      #!/usr/bin/env zsh
+      set -e
+      export PATH=${pkgs.nodejs_20}/bin:${pkgs.nodePackages_latest.pnpm}/bin:$PATH
+      pnpm dlx tailwindcss -i src/styles/tailwind.css -o assets/main.css --watch
+    '';
 
-          overlays = [
-            (final: prev: { nodejs = prev.nodejs-18_x; }) # <== Set desired node version here
-          ];
-        };
+    # gitignore = import "${self}/.config/nix/.gitignore.nix" { inherit pkgs; };
+    # npmrc = import "${self}/.config/nix/.npmrc.nix" { inherit nixago; };
+    # cargoConfig = import "${self}/.config/nix/cargo.nix" { inherit nixago; };
+    # env = import "${self}/.config/nix/env.nix" { inherit pkgs; };
+    # package = import "${self}/.config/nix/package.nix" { inherit nixago; };
 
-        libraries = with pkgs; [
-          webkitgtk
-          gtk3
-          cairo
-          gdk-pixbuf
-          glib
-          dbus
-          openssl_3
-          cargo
-          rustc
-        ];
 
-        packages = with pkgs; [
-          curl
-          git
-          wget
-          pkg-config
-          dbus
-          openssl_3
-          glib
-          gtk3
-          libsoup
-          webkitgtk
-          cargo
-          rustc
-          nodejs
-          nodePackages.pnpm
-          nixpkgs-fmt
-        ];
-      in
-      {
-        devShell = pkgs.mkShell {
-          buildInputs = packages;
+    # Combine all shell hooks
+    # combinedShellHook = ''
+      # ${gitignore}
+      # ${npmrc.shellHook}
+      # ${cargoConfig.shellHook}
+      # ${env}
+      # ${package.shellHook}
+    # '';
 
-          shellHook =
-            ''
-              export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath libraries}:$LD_LIBRARY_PATH
-            '';
-        };
-      });
+  in {
+    defaultPackage.${system} = with pkgs; stdenv.mkDerivation {
+      name = "sk-tcg-trader";
+      src = self;
+
+      buildInputs = [
+        openssl
+        pkgconfig
+        rustc
+        cargo
+        cargo-watch
+        just
+        nodejs_20
+        nodePackages_latest.pnpm
+      ];
+
+      shellHook = ''
+        export OPENSSL_DIR=${openssl.dev}
+        export OPENSSL_LIB_DIR=${openssl.out}/lib
+        export OPENSSL_INCLUDE_DIR=${openssl.dev}/include
+      '';
+        # ${combinedShellHook} # Include the combined shell hooks goes in shell hook
+    };
+    tailwind = build-tailwind;
+  };
 }
