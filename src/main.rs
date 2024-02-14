@@ -5,11 +5,14 @@ use axum::{
     routing::get,
     Router,
 };
+use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
 async fn main() {
+    let assets_path = std::env::current_dir().unwrap();
+    
     tracing_subscriber::registry()
         .with(
             tracing_subscriber::EnvFilter::try_from_default_env()
@@ -20,8 +23,9 @@ async fn main() {
 
     info!("hello, web server!");
     // build our application with a single route
-    let app = Router::new().route("/", get(root));
-
+    let app = Router::new()
+        .route("/", get(root))
+            .nest_service("/assets", ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),);
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
     axum::serve(listener, app).await.unwrap();

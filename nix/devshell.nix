@@ -12,5 +12,6 @@ pkgs.mkShell {
     rust-analyzer
     pkg-config
     bacon
+    nodePackages_latest.pnpm
   ];
 }
