@@ -1,28 +1,27 @@
-<!DOCTYPE html>
+<!-- prettier-ignore -->
+{% extends "base.html" %}
 
-<head>
-  <title>Steven Carpenters Portfolio</title>
-  <link href="/assets/main.css" rel="stylesheet" />
-</head>
+{% block title %}Hello!{% endblock %}
 
-<body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>Blog</li>
-      <li>Projects</li>
-      <li>Resume</li>
-    </ul>
-  </nav>
-  <h3 class="text-red-500 font-extrabold">Welcome my boy!</h3>
-  <p>My name is Steven Carpenter, and I am 25 years old. Since 2011, I have been immersed in the world of coding,
-    driven by a passion to enhance the ease and security of our daily computer use for everyone. My primary programming
+{% block content %}
+<div class="mx-72">
+  <h3 class="text-stone-900 text-4xl font-extrabold pt-6">Hacker.</h3>
+  <h3 class="text-stone-900 text-4xl font-extrabold">Maker.</h3>
+  <h3 class="text-stone-900 text-4xl font-extrabold pb-6">Developer.</h3>
+
+  <p class="text-stone-900">My name is Steven Carpenter, and I am 24 years old. Since 2011, I have been immersed in
+    software developemnt,
+    driven by a passion to enhance the ease and security of daily computer use for everyone. My primary programming
     language is Rust, but I also have experience in seven other languages, including Go and JavaScript.</p>
-  <p>I aim to update my blog at least twice a week, typically on Tuesdays and Thursdays. Additionally, you might see
+  <br />
+  <p class="text-stone-900">I aim to update my blog at least twice a week, typically on Tuesdays and Thursdays.
+    Additionally, you might see
     extra posts coinciding with major updates to my projects or significant news in the tech industry. If you wish to
     get in touch, please email me at steven.carpenter@skdevstudios.com, using 'Portfolio Contact' as the subject.</p>
-  <p>I've chosen to create my own website for this venture instead of relying on traditional blogging platforms or
+  <br />
+  <p class="text-stone-900">I've chosen to create my own website for this venture instead of relying on traditional
+    blogging platforms or
     social media because I view those as channels primarily for discoverability. In contrast, this website represents my
     own space on the web—a space I own, moderate, and host. This independence ensures that my content remains unaffected
     by the profit-driven algorithms of other platforms.</p>
-</body>
+  {% endblock %}

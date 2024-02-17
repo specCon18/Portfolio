@@ -25,7 +25,10 @@ async fn main() {
     // build our application with a single route
     let app = Router::new()
         .route("/", get(root))
-            .nest_service("/assets", ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),);
+        .route("/blog", get(blog))
+        .route("/resume", get(resume))
+        .route("/projects", get(projects))
+        .nest_service("/assets", ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),);
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
     axum::serve(listener, app).await.unwrap();
@@ -34,10 +37,34 @@ async fn root() -> impl IntoResponse {
     let template = HelloTemplate {};
     HtmlTemplate(template)
 }
+async fn blog() -> impl IntoResponse {
+    let template = BlogTemplate {};
+    HtmlTemplate(template)
+}
+async fn resume() -> impl IntoResponse {
+    let template = ResumeTemplate {};
+    HtmlTemplate(template)
+}
+async fn projects() -> impl IntoResponse {
+    let template = ProjectsTemplate {};
+    HtmlTemplate(template)
+}
 
 #[derive(Template)]
 #[template(path = "index.html")]
 struct HelloTemplate;
+
+#[derive(Template)]
+#[template(path = "blog.html")]
+struct BlogTemplate;
+
+#[derive(Template)]
+#[template(path = "resume.html")]
+struct ResumeTemplate;
+
+#[derive(Template)]
+#[template(path = "projects.html")]
+struct ProjectsTemplate;
 
 /// A wrapper type that we'll use to encapsulate HTML parsed by askama into valid HTML for axum to serve.
 struct HtmlTemplate<T>(T);
