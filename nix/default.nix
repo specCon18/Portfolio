@@ -5,6 +5,8 @@ pkgs.rustPlatform.buildRustPackage rec {
   version = "1.0.0";
   cargoLock.lockFile = ../Cargo.lock;
   src = pkgs.lib.cleanSource ../.;
-  buildInputs = [ ];
+  buildInputs = with pkgs; [
+    surrealdb
+   ];
 #  doCheck = false;
 }
