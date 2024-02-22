@@ -7,6 +7,8 @@ pkgs.rustPlatform.buildRustPackage rec {
   src = pkgs.lib.cleanSource ../.;
   buildInputs = with pkgs; [
     surrealdb
+    clang
    ];
 #  doCheck = false;
+  LIBCLANG_PATH="${pkgs.llvmPackages.libclang.lib}/lib";
 }

@@ -1,10 +1,4 @@
 { pkgs ? import <nixpkgs> { } }:
-let
-  runtimeLibs = [
-      pkgs.libclang
-      pkgs.rocksdb
-  ];
-in
   pkgs.mkShell {
     # Get dependencies from the main package
     inputsFrom = [ (pkgs.callPackage ./default.nix { }) ];
@@ -20,7 +14,7 @@ in
       bacon
       nodePackages_latest.pnpm
       surrealdb
-      libclang
+      clang
     ];
-    LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath runtimeLibs}";
+    LIBCLANG_PATH="${pkgs.llvmPackages.libclang.lib}/lib";
   }
